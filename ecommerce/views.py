@@ -11,3 +11,24 @@ def item_view(req, item_id):
         "item_id": item_id
     }
     return render(req, 'index.html', context= context_data)
+
+def home_view(req):
+    return render(req, 'home.html')
+
+def category_view(req):
+    return render(req, 'category.html')
+
+def product_view(req, id):
+    data = {
+        "id": id
+    }
+    return render(req, 'product.html', context=data)
+
+def admin_view(req, id):
+    data = {
+        "id": id
+    }
+    return render(req, 'admin.html', context=data)
+
+def contact_view(req):
+    return render(req, 'contact.html')
